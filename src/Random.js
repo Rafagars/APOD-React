@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Content.css'
 import Day from './Day'
 
-class Content extends Component  {
+class Random extends Component  {
 
 	state = {
     	data: [],
@@ -11,7 +11,7 @@ class Content extends Component  {
   // Code is invoked after the component is mounted/inserted into the DOM tree.
   componentDidMount() {
 
-    const { url } = this.props
+    const url = "https://apodapi.herokuapp.com/api/?count=1"
 
     fetch(url)
       .then(result => result.json())
@@ -25,14 +25,22 @@ class Content extends Component  {
   render() {
     const { data } = this.state
 
+    const randoms = data.map((random, index) => {
+    	return(
+    		<div className="text-center">
+    			<Day day={random} />
+			</div>
+    		)
+    })
+
 	return (
 		< >
-		<div className="container">
-			<Day day={data} />
-		</div>
+			<div className="container">
+				{randoms}
+			</div>
 		< />
 		
 	)}
 }
 
-export default Content
+export default Random
