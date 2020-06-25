@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class Day extends Component {
 	render(){
-		const {day} = this.props
+		const { day } = this.props
 		return(
 			<div className="text-center">
 				<h1> Astronomy Picture of the Day </h1>

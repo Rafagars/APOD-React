@@ -25,13 +25,10 @@ class Content extends Component  {
   render() {
     const { data } = this.state
 
-	return (
-		< >
-		<div className="container">
-			<Day day={data} />
-		</div>
-		< />
-		
+	  return (
+		  <div className="container">
+			  <Day day={data} />
+		  </div>
 	)}
 }
 
