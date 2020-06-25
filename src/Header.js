@@ -3,7 +3,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  useParams
 } from "react-router-dom";
 import Content from './Content'
 import Random from './Random'
@@ -11,6 +12,9 @@ import Archive from './Archive'
 
 class Header extends Component {
     render(){
+        let thisYear = new Date()
+        thisYear = thisYear.getFullYear()
+        const years = Array.from(Array((thisYear + 1) - 1995), (_, i) => i + 1995)
         return (
         <header id="header-nav" className="navbar">
             <div className="container">
@@ -26,8 +30,8 @@ class Header extends Component {
                             <Content url="https://apodapi.herokuapp.com/api/"/>
                         </Route>
                         <Route path="/archives">
-                            <Archive />
-                        </Route>
+                            <Archive array = {years} source="/archive"/>
+                        </Route>  
                         <Route path="/random">
                             <Random/>
                         </Route>

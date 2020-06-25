@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Archive extends Component {
-    render(){
-        let thisYear = new Date()
-        thisYear = thisYear.getFullYear()
-        const years = Array.from(Array((thisYear + 1) - 1995), (_, i) => i + 1995)
+    render(props){
 
-        const divYears = years.map((year, index) => {
+        const divs = this.props.array.map((element, index) => {
+            const source = this.props.source + "/" + element
             return(
                 <div className="year">
-                    <h4>{year}</h4>
+                    <h4><Link to={source}>{element}</Link></h4>
                 </div>
             )
         })
 
         return(
             <div className="years">
-                {divYears}
+                {divs}
             </div>
         )
     }
