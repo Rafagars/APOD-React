@@ -25,7 +25,7 @@ class Header extends Component {
                     <Link to="/random" className="nav-item nav-link">Random</Link>
 
                     <Switch>
-                        <Route exact path="/">
+                        <Route exact path="/APOD-React">
                             <Content url="https://apodapi.herokuapp.com/api/"/>
                         </Route>
                         <Route path="/APOD-React/archives">
