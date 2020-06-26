@@ -11,9 +11,6 @@ import Archive from './Archive'
 
 class Header extends Component {
     render(){
-        let thisYear = new Date()
-        thisYear = thisYear.getFullYear()
-        const years = Array.from(Array((thisYear + 1) - 1995), (_, i) => i + 1995)
         return (
         <header id="header-nav" className="navbar">
             <div className="container">
@@ -28,8 +25,8 @@ class Header extends Component {
                         <Route exact path="/APOD-React">
                             <Content url="https://apodapi.herokuapp.com/api/"/>
                         </Route>
-                        <Route path="/APOD-React/archives">
-                            <Archive array = {years} source="/APOD-React/archive"/>
+                        <Route path="/APOD-React/archives/:date">
+                            <Archive />
                         </Route>  
                         <Route path="/APOD-React/random">
                             <Random/>
