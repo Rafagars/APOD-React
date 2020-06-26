@@ -3,8 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useParams
+  Link
 } from "react-router-dom";
 import Content from './Content'
 import Random from './Random'
@@ -19,7 +18,7 @@ class Header extends Component {
         <header id="header-nav" className="navbar">
             <div className="container">
                 <Router>
-                    <h1 id="logo"><img id="logo-img" className="" src="./nasa.png" alt="Logo"/><Link to="/">APOD NASA</Link></h1>
+                    <h1 id="logo"><img id="logo-img" className="" src="./nasa.png" alt="Logo"/><Link to="/APOD-React/">APOD NASA</Link></h1>
                 
                     <Link to="/" className="nav-item nav-link">Home</Link>
                     <Link to="/archives" className="nav-item nav-link">Archives</Link>
@@ -29,10 +28,10 @@ class Header extends Component {
                         <Route exact path="/">
                             <Content url="https://apodapi.herokuapp.com/api/"/>
                         </Route>
-                        <Route path="/archives">
-                            <Archive array = {years} source="/archive"/>
+                        <Route path="/APOD-React/archives">
+                            <Archive array = {years} source="/APOD-React/archive"/>
                         </Route>  
-                        <Route path="/random">
+                        <Route path="/APOD-React/random">
                             <Random/>
                         </Route>
                     </Switch>

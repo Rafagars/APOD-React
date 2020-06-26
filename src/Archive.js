@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 class Archive extends Component {
     render(props){
@@ -8,7 +8,9 @@ class Archive extends Component {
             const source = this.props.source + "/" + element
             return(
                 <div className="year">
-                    <h4><Link to={source}>{element}</Link></h4>
+                    <Router>
+                        <h4><Link to={source}>{element}</Link></h4>
+                    </Router>
                 </div>
             )
         })
