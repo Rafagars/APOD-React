@@ -21,8 +21,8 @@ class Header extends Component {
                     <h1 id="logo"><img id="logo-img" className="" src="./nasa.png" alt="Logo"/><Link to="/APOD-React/">APOD NASA</Link></h1>
                 
                     <Link to="/" className="nav-item nav-link">Home</Link>
-                    <Link to="/archives" className="nav-item nav-link">Archives</Link>
-                    <Link to="/random" className="nav-item nav-link">Random</Link>
+                    <Link to="/APOD-React/archives" className="nav-item nav-link">Archives</Link>
+                    <Link to="/APOD-React/random" className="nav-item nav-link">Random</Link>
 
                     <Switch>
                         <Route exact path="/APOD-React">
