@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/APOD-React/static/css/main.36c35d6b.chunk.css",
-    "main.js": "/APOD-React/static/js/main.bcabd081.chunk.js",
-    "main.js.map": "/APOD-React/static/js/main.bcabd081.chunk.js.map",
+    "main.js": "/APOD-React/static/js/main.5aa8aca6.chunk.js",
+    "main.js.map": "/APOD-React/static/js/main.5aa8aca6.chunk.js.map",
     "runtime-main.js": "/APOD-React/static/js/runtime-main.ffd1b17d.js",
     "runtime-main.js.map": "/APOD-React/static/js/runtime-main.ffd1b17d.js.map",
     "static/css/2.af3c1da9.chunk.css": "/APOD-React/static/css/2.af3c1da9.chunk.css",
     "static/js/2.0c599fbb.chunk.js": "/APOD-React/static/js/2.0c599fbb.chunk.js",
     "static/js/2.0c599fbb.chunk.js.map": "/APOD-React/static/js/2.0c599fbb.chunk.js.map",
     "index.html": "/APOD-React/index.html",
-    "precache-manifest.ea36285c8683d25c1e755f617a9500cc.js": "/APOD-React/precache-manifest.ea36285c8683d25c1e755f617a9500cc.js",
+    "precache-manifest.d255f4b17cde6c6da8bdd87818bf3ad3.js": "/APOD-React/precache-manifest.d255f4b17cde6c6da8bdd87818bf3ad3.js",
     "service-worker.js": "/APOD-React/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/APOD-React/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.36c35d6b.chunk.css.map": "/APOD-React/static/css/main.36c35d6b.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.0c599fbb.chunk.js",
     "static/css/main.36c35d6b.chunk.css",
-    "static/js/main.bcabd081.chunk.js"
+    "static/js/main.5aa8aca6.chunk.js"
   ]
 }
