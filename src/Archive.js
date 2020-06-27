@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
-import { useRouteMatch } from 'react-router-dom';
-import Content from './Content';
+import { Link } from 'react-router-dom';
+
 
 class Archive extends Component {
     render(props){
-        function Date(){
-            let date = useRouteMatch();
-            console.log(date.params.date)
+        const divs = this.props.array.map((element, index) => {
+            const source = this.props.source + "/" + element
             return(
-                <Content url={`https://apodapi.herokuapp.com/api/?date=${date.params.date}`} />
+                <div className="year">
+                    <h4 key={element}><Link to={source}>{element}</Link></h4>
+                </div>
             )
-        } 
-    
+        })
         return(
-            <Date />
+            <div className="years">
+                {divs}
+            </div>
         )
     }
 }
-
 export default Archive

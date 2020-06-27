@@ -12,7 +12,7 @@ class Content extends Component  {
   componentDidMount() {
 
     const { url } = this.props
-
+    
     fetch(url)
       .then(result => result.json())
       .then(result => {
