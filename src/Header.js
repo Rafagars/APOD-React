@@ -15,15 +15,12 @@ class Header extends Component {
         let thisYear = new Date()
         thisYear = thisYear.getFullYear()
         const years = Array.from(Array((thisYear + 1) - 1995), (_, i) => i + 1995)
-        const months = Array.from(Array(12), (_, i) => i + 1)
+        
         const Url = () => {
             let { year } = useParams()
             let { month } = useParams()
             let { day } = useParams()
             let { url } = useRouteMatch()
-            console.log(year)
-            console.log(month)
-            console.log(day)
 
             if (day !== undefined){
                 return(
@@ -39,6 +36,7 @@ class Header extends Component {
                     <Archive array={days} source = {url} />
                 )
             } else {
+                const months = Array.from(Array(12), (_, i) => i + 1)
                 return(
                     <Archive array={months} source = {url} />
                 )
