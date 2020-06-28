@@ -28,26 +28,19 @@ body a:hover{
 	width: 75px;
 }
 
-.years, .months, .days {
+.flexs {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.year, .month, .day {
+.flex {
 	flex: 1 0 20%;
 	height: 100px;
   	background-color: #2c2f33;
   	border: 2px solid #23272a;
   	opacity: 0.9;
 	margin: 10px;
-}
-
-.year, .month {
 	padding: 25px;
-}
-
-.day {
-	padding: 10px;
 }
 
 .nav-foot a{
