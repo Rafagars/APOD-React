@@ -30,7 +30,7 @@ const Url = () => {
                 days = Array.from(Array(numOfDays), (_, i) => i + 1)
             }
             return(
-                <Archive array={days} source = {url} title={monthNames[month - 1]} />
+                <Archive array={days} source = {url} title={`${monthNames[month - 1]} - ${year}`} />
             )
         } else if (year !== undefined){
             let months = []
