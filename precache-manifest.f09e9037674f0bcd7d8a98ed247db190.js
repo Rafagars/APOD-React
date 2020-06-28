@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "da9c1d32353340cab7c77d26c5395373",
+    "revision": "dd0089fca6f7a216b7ced122c0979845",
     "url": "/APOD-React/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/APOD-React/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "520769e5f6c4b0f1fdeb",
+    "revision": "354086a25bcc4710f324",
     "url": "/APOD-React/static/css/main.d88822cb.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/APOD-React/static/js/2.acf003a1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "520769e5f6c4b0f1fdeb",
-    "url": "/APOD-React/static/js/main.f3cd3443.chunk.js"
+    "revision": "354086a25bcc4710f324",
+    "url": "/APOD-React/static/js/main.d51574b2.chunk.js"
   },
   {
     "revision": "88cb080e02f59846beb4",
