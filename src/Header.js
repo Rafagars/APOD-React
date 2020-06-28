@@ -12,9 +12,9 @@ import Archive from './Archive'
 
 class Header extends Component {
     render(){
-        let thisYear = new Date()
-        thisYear = thisYear.getFullYear()
-        const years = Array.from(Array((thisYear + 1) - 1995), (_, i) => i + 1995)
+        let date = new Date()
+        let thisYear = date.getFullYear()
+        
         
         const Url = () => {
             let { year } = useParams()
@@ -29,16 +29,34 @@ class Header extends Component {
             } else if (month !== undefined) {
                 let numOfDays = new Date(year, month, 0).getDate()
                 numOfDays = parseInt(numOfDays.toString())
-                console.log(numOfDays)
-        
-                const days = Array.from(Array(numOfDays), (_, i) => i + 1)
+                let days = []
+                if(year == 1995 && month == 6){
+                    days = Array.from(Array(11), (_, i) => i + 20)
+                } else if(year == thisYear && month == (date.getMonth() + 1)) {
+                    days = days = Array.from(Array(date.getDate()), (_, i) => i + 1)
+                } else {
+                    days = Array.from(Array(numOfDays), (_, i) => i + 1)
+                }
                 return(
                     <Archive array={days} source = {url} />
                 )
-            } else {
-                const months = Array.from(Array(12), (_, i) => i + 1)
+            } else if (year !== undefined){
+                let months = []
+                if (year == thisYear){
+                    months = Array.from(Array(12 - (date.getMonth() + 1)), (_, i) => i + 1) 
+
+                }else if (year == 1995 ){
+                    months = Array.from(Array(12 - 5), (_, i) => i + 6) 
+                } else {
+                    months = Array.from(Array(12), (_, i) => i + 1)
+                }
                 return(
                     <Archive array={months} source = {url} />
+                )
+            } else {
+                const years = Array.from(Array((thisYear + 1) - 1995), (_, i) => i + 1995)
+                return(
+                    <Archive array={years} source ={url} />
                 )
             }
 
@@ -67,7 +85,7 @@ class Header extends Component {
                             <Url />
                         </Route>
                         <Route path="/APOD-React/archives" >
-                            <Archive array={years} source="/APOD-React/archives" />
+                            <Url />
                         </Route>  
                         <Route path="/APOD-React/random">
                             <Random/>

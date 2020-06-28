@@ -13,7 +13,7 @@ class Archive extends Component {
             )
         })
         return(
-            <div className="years">
+            <div className="years container">
                 {divs}
             </div>
         )

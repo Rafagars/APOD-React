@@ -34,7 +34,7 @@ body a:hover{
 }
 
 .year, .month, .day {
-	flex: 1 0 15%;
+	flex: 1 0 20%;
 	height: 100px;
   	background-color: #2c2f33;
   	border: 2px solid #23272a;
