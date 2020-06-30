@@ -6,6 +6,8 @@ class Footer extends Component {
 		return(
 			<div className="text-center">
 				<p>
+					<b>This is a unofficial version of the site made by: Rafael Garcia. For non-commercial use. Only to practice with React</b>
+					<br />
 					<b> Authors &amp; editors: </b>
 					<a href="http://www.phy.mtu.edu/faculty/Nemiroff.html">Robert Nemiroff</a>
 					(<a href="http://www.phy.mtu.edu/">MTU</a>) &amp;
