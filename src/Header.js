@@ -8,7 +8,7 @@ import Content from './Content'
 import Random from './Random'
 import Url from './Url'
 
-class Header extends Component {
+export default class Header extends Component {
     render(){
     
         return (
@@ -49,4 +49,3 @@ class Header extends Component {
     }
 }
 
-export default Header

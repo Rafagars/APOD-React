@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 
-class Archive extends Component {
+export default class Archive extends Component {
     render(props){
         const { title } = this.props
         const divs = this.props.array.map((element, index) => {
@@ -23,4 +23,3 @@ class Archive extends Component {
         )
     }
 }
-export default Archive

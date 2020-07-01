@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 
-class Footer extends Component {
+export default class Footer extends Component {
 	render(){
 		return(
 			<div className="text-center">
@@ -27,5 +27,3 @@ class Footer extends Component {
 	}
 		
 }
-
-export default Footer

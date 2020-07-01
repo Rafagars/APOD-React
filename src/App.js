@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Header';
 import Footer from './Footer';
 
-class App extends Component {
+export default class App extends Component {
 	render(){
 		return(
 			<Router>
@@ -16,4 +16,4 @@ class App extends Component {
 	}
 }
 
-export default App;
+

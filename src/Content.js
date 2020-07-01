@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Content.css'
 import Day from './Day'
 
-class Content extends Component  {
+export default class Content extends Component  {
 
 	state = {
     	data: [],
@@ -31,5 +31,3 @@ class Content extends Component  {
 		  </div>
 	)}
 }
-
-export default Content

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Day extends Component {
+export default class Day extends Component {
 	render(){
 		const { day } = this.props
 		const Media = () => {
@@ -34,5 +34,3 @@ class Day extends Component {
 			)
 	}
 }
-
-export default Day

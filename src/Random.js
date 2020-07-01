@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Content.css'
 import Day from './Day'
 
-class Random extends Component  {
+export default class Random extends Component  {
 
 	state = {
     	data: [],
@@ -34,13 +34,9 @@ class Random extends Component  {
     })
 
 	return (
-		< >
-			<div className="container">
-				{randoms}
-			</div>
-		< />
-		
+		<div className="container">
+			{randoms}
+		</div>		
 	)}
 }
 
-export default Random
