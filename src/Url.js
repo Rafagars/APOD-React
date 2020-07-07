@@ -35,7 +35,7 @@ const Url = () => {
         } else if (year !== undefined){
             let months = []
             if (year == thisYear){
-                months = Array.from(Array(12 - (date.getMonth() + 1)), (_, i) => i + 1) 
+                months = Array.from(Array((date.getMonth()) + 1), (_, i) => i + 1) 
 
             }else if (year == 1995 ){
                 months = Array.from(Array(12 - 5), (_, i) => i + 6) 

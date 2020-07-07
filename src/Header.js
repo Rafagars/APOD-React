@@ -7,6 +7,8 @@ import {
 import Content from './Content'
 import Random from './Random'
 import Url from './Url'
+import SearchForm from './SearchForm'
+import Search from './Search'
 
 export default class Header extends Component {
     render(){
@@ -15,9 +17,9 @@ export default class Header extends Component {
         <header id="header-nav" className="navbar">
             <div className="container">
                 
-                    <h1 id="logo"><img id="logo-img" className="" src="./nasa.png" alt="Logo"/><Link to="/APOD-React/">APOD NASA</Link></h1>
+                    <h1 id="logo" className=""><img id="logo-img" className="" src="./nasa.png" alt="Logo"/><Link to="/APOD-React/">APOD NASA</Link></h1>
                 
-                    <Link to="/APOD-React/" className="nav-item nav-link">Home</Link>
+                    <SearchForm className="nav-item" />
                     <Link to="/APOD-React/archives" className="nav-item nav-link">Archives</Link>
                     <Link to="/APOD-React/random" className="nav-item nav-link">Random</Link>
 
@@ -39,6 +41,9 @@ export default class Header extends Component {
                         </Route>  
                         <Route path="/APOD-React/random">
                             <Random/>
+                        </Route>
+                        <Route path="/APOD-React/search">
+                            <Search url="https://apodapi.herokuapp.com/search/?search_query=planetary%20nebula&image_thumbnail_size=240&number=10&page=1"/>
                         </Route>
                     </Switch>
                 
