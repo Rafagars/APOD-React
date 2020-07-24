@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { useParams, useRouteMatch } from 'react-router-dom';
 import Content from './Content';
 import Archive from './Archive';

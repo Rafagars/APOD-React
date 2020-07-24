@@ -5,8 +5,9 @@ export default class Search extends Component {
         data: []
     }
 
-    componentDidMount(props){
-        const { url } = this.props;
+    componentDidMount(){
+        const { query } = this.props
+        const { url } = `https://apodapi.herokuapp.com/search/?search_query=${query}&image_thumbnail_size=240&number=10&page=1`;
 
         fetch(url)
             .then(result => result.json())

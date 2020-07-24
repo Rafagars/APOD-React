@@ -11,7 +11,27 @@ import SearchForm from './SearchForm'
 import Search from './Search'
 
 export default class Header extends Component {
+    constructor(props){
+        super(props);
+        this.state = {value: ''};
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event){
+        this.setState({value: event.target.value})
+    }
+
+    handleSubmit(event) {
+        console.log(`Search: ${this.state.value}`);
+        return(
+            <Search query={this.state.value} />
+        )
+    }
     render(){
+        const {value} = this.state
+        console.log(value);
     
         return (
         <header id="header-nav" className="navbar">
@@ -19,7 +39,10 @@ export default class Header extends Component {
                 
                     <h1 id="logo" className=""><img id="logo-img" className="" src="./nasa.png" alt="Logo"/><Link to="/APOD-React/">APOD NASA</Link></h1>
                 
-                    <SearchForm className="nav-item" />
+                    <form action="/APOD-React/search" onSubmit={this.handleSubmit}>
+                        <input type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search..." className="form-control"/>
+                        <input type="submit" className="d-none" value="Search"/>
+                    </form>
                     <Link to="/APOD-React/archives" className="nav-item nav-link">Archives</Link>
                     <Link to="/APOD-React/random" className="nav-item nav-link">Random</Link>
 
@@ -43,7 +66,7 @@ export default class Header extends Component {
                             <Random/>
                         </Route>
                         <Route path="/APOD-React/search">
-                            <Search url="https://apodapi.herokuapp.com/search/?search_query=planetary%20nebula&image_thumbnail_size=240&number=10&page=1"/>
+                            <Search query={value}/>
                         </Route>
                     </Switch>
                 

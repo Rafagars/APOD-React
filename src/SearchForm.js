@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Search from './Search'
 
 export default class NameForm extends Component {
     constructor(props){
@@ -14,15 +15,17 @@ export default class NameForm extends Component {
     }
 
     handleSubmit(event) {
-        console.log(`Search: ${this.state.value}`)
-        event.preventDefault();
+        console.log(`Search: ${this.state.value}`);
+        return(
+            <Search query = {this.state.value} />
+        )
     }
 
     render(){
         return(
-            <form onSubmit={this.handleSubmit}>
+            <form action="/APOD-React/search" onSubmit={this.handleSubmit}>
                 <input type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search..." className="form-control"/>
-                <input type="submit" class="d-none" value="Search"/>
+                <input type="submit" className="d-none" value="Search"/>
             </form>
 
         )

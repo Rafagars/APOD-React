@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 export default class Day extends Component {
+	
 	render(){
 		const { day } = this.props
 		const Media = () => {

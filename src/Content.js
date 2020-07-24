@@ -23,11 +23,9 @@ export default class Content extends Component  {
   }
 
   render() {
-    const { data } = this.state
-
 	  return (
 		  <div className="container">
-			  <Day day={data} />
+			  <Day day={ this.state.data } />
 		  </div>
 	)}
 }
