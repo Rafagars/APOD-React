@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "934857862c7bc59337c6c2e47fd27402",
+    "revision": "dd47c02d4ec9c70a18901484020d9492",
     "url": "/APOD-React/index.html"
   },
   {
-    "revision": "718c8c1281d7b73e4159",
+    "revision": "4716c1e17983b1b51a61",
     "url": "/APOD-React/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "f9ad3f94d33c2617e621",
+    "revision": "250e83048fc961895e67",
     "url": "/APOD-React/static/css/main.d88822cb.chunk.css"
   },
   {
-    "revision": "718c8c1281d7b73e4159",
-    "url": "/APOD-React/static/js/2.83dc71d3.chunk.js"
+    "revision": "4716c1e17983b1b51a61",
+    "url": "/APOD-React/static/js/2.a79f610e.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/APOD-React/static/js/2.83dc71d3.chunk.js.LICENSE.txt"
+    "url": "/APOD-React/static/js/2.a79f610e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f9ad3f94d33c2617e621",
-    "url": "/APOD-React/static/js/main.eafba316.chunk.js"
+    "revision": "250e83048fc961895e67",
+    "url": "/APOD-React/static/js/main.7df28019.chunk.js"
   },
   {
     "revision": "88cb080e02f59846beb4",
