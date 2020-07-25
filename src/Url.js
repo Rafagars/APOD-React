@@ -5,12 +5,12 @@ import Archive from './Archive';
 
 
 const Url = () => {
-        let date = new Date()
-        let thisYear = date.getFullYear()
-        let { year } = useParams()
-        let { month } = useParams()
-        let { day } = useParams()
-        let { url } = useRouteMatch()
+        const date = new Date()
+        const thisYear = date.getFullYear()
+        const { year } = useParams()
+        const { month } = useParams()
+        const { day } = useParams()
+        const { url } = useRouteMatch()
 
         if (day !== undefined){
             return(
