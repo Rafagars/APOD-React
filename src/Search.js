@@ -11,7 +11,7 @@ export default class Search extends Component {
     componentDidMount(){
         const  query  = this.props.match.params.query;
         console.log(query)
-        const url  = `https://apodapi.herokuapp.com/search/?search_query=${query}&image_thumbnail_size=240&number=10&page=1`;
+        const url  = `https://apodapi.herokuapp.com/search/?search_query=${query}&image_thumbnail_size=240&number=30&page=1`;
         console.log(`Url: ${url}`)
         fetch(url)
             .then(result => result.json())
@@ -27,16 +27,19 @@ export default class Search extends Component {
         console.log(`Data: ${data}`)
         const searches = data.map((search, index) => {
             return(
-                <div key={index} className="text-center">
-                    <h2 className="">{search.title}</h2>
-                    <a href={search.hdurl}><img alt={search.title} src={search.url} width="30%"/></a>
+                <div key={index} className="text-center search-flex">
+                    <a href={search.apod_site} ><h2 className="">{search.title}</h2></a>
+                    <h6>{search.date}</h6>
+                    <a href={search.hdurl}><img alt={search.title} src={search.url} width="85%"/></a>
                 </div>
             )
         })
 
         return(
-            <div className="text-center">
-                {searches}
+            <div className="container-fluid">
+                <div className="container text-center flexs">
+                    {searches}
+                </div>
             </div>
         )
 

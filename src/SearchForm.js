@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Search from './Search'
+import { Redirect } from 'react-router-dom';
 
 export default class NameForm extends Component {
     constructor(props){
@@ -16,9 +16,6 @@ export default class NameForm extends Component {
 
     handleSubmit(event) {
         console.log(`Search: ${this.state.value}`);
-        return(
-            <Search/>
-        )
     }
 
     render(){

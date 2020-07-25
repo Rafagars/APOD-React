@@ -43,6 +43,12 @@ body a:hover{
 	padding: 25px;
 }
 
+.search-flex {
+	flex: 1 0 20%;
+	margin: 10px;
+	padding: 25px;
+}
+
 .nav-foot a{
 	margin: 10px;
 }
